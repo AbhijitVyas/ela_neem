@@ -1,0 +1,866 @@
+<?xml version="1.0"?>
+<!-- created with static scene to urdf converter -->
+  <robot name="Anna">
+    <link name="Hip">
+        <visual name="Hip">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="RThigh">
+        <visual name="RThigh">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RThigh">
+         <origin xyz="0.000000 -0.000000 -0.226500" rpy="3.141593 0.000000 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.453000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RThigh_joint" type="fixed">
+        <origin xyz="0.095000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="Hip"/>
+        <child link="RThigh"/>
+    </joint>
+    <link name="RShin">
+        <visual name="RShin">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RShin">
+         <origin xyz="0.000000 -0.000000 -0.217000" rpy="3.141593 0.000000 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.434000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RShin_joint" type="fixed">
+        <origin xyz="0.000000 -0.000000 -0.453000" rpy="0 0 0"/>
+        <parent link="RThigh"/>
+        <child link="RShin"/>
+    </joint>
+    <link name="RFoot">
+        <visual name="RFoot">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RFoot">
+         <origin xyz="0.000000 -0.071000 -0.031000" rpy="1.982468 0.000000 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.154945"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RFoot_joint" type="fixed">
+        <origin xyz="0.000000 -0.000000 -0.434000" rpy="0 0 0"/>
+        <parent link="RShin"/>
+        <child link="RFoot"/>
+    </joint>
+    <link name="RToe">
+        <visual name="RToe">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RToe_joint" type="fixed">
+        <origin xyz="0.000000 -0.142000 -0.062000" rpy="0 0 0"/>
+        <parent link="RFoot"/>
+        <child link="RToe"/>
+    </joint>
+    <link name="LThigh">
+        <visual name="LThigh">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LThigh">
+         <origin xyz="0.000000 -0.000000 -0.226500" rpy="3.141593 0.000000 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.453000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LThigh_joint" type="fixed">
+        <origin xyz="-0.095000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="Hip"/>
+        <child link="LThigh"/>
+    </joint>
+    <link name="LShin">
+        <visual name="LShin">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LShin">
+         <origin xyz="0.000000 -0.000000 -0.217000" rpy="3.141593 0.000000 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.434000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LShin_joint" type="fixed">
+        <origin xyz="0.000000 -0.000000 -0.453000" rpy="0 0 0"/>
+        <parent link="LThigh"/>
+        <child link="LShin"/>
+    </joint>
+    <link name="LFoot">
+        <visual name="LFoot">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LFoot">
+         <origin xyz="0.000000 -0.071000 -0.031000" rpy="1.982468 0.000000 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.154945"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LFoot_joint" type="fixed">
+        <origin xyz="0.000000 -0.000000 -0.434000" rpy="0 0 0"/>
+        <parent link="LShin"/>
+        <child link="LFoot"/>
+    </joint>
+    <link name="LToe">
+        <visual name="LToe">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LToe_joint" type="fixed">
+        <origin xyz="0.000000 -0.142000 -0.062000" rpy="0 0 0"/>
+        <parent link="LFoot"/>
+        <child link="LToe"/>
+    </joint>
+    <link name="Ab">
+        <visual name="Ab">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="Ab">
+         <origin xyz="0.000000 -0.000000 0.094500" rpy="0.000000 0.000000 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.189000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="Ab_joint" type="fixed">
+        <origin xyz="0.000000 -0.000000 0.078000" rpy="0 0 0"/>
+        <parent link="Hip"/>
+        <child link="Ab"/>
+    </joint>
+    <link name="Chest">
+        <visual name="Chest">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="Chest_joint" type="fixed">
+        <origin xyz="0.000000 -0.000000 0.189000" rpy="0 0 0"/>
+        <parent link="Ab"/>
+        <child link="Chest"/>
+    </joint>
+    <link name="RShoulder">
+        <visual name="RShoulder">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RShoulder">
+         <origin xyz="0.076500 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.153000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RShoulder_joint" type="fixed">
+        <origin xyz="0.037000 0.005000 0.158000" rpy="0 0 0"/>
+        <parent link="Chest"/>
+        <child link="RShoulder"/>
+    </joint>
+    <link name="RUArm">
+        <visual name="RUArm">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RUArm">
+         <origin xyz="0.143500 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.287000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RUArm_joint" type="fixed">
+        <origin xyz="0.153000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RShoulder"/>
+        <child link="RUArm"/>
+    </joint>
+    <link name="RFArm">
+        <visual name="RFArm">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RFArm">
+         <origin xyz="0.103000 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.206000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RFArm_joint" type="fixed">
+        <origin xyz="0.287000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RUArm"/>
+        <child link="RFArm"/>
+    </joint>
+    <link name="RHand">
+        <visual name="RHand">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RHand_joint" type="fixed">
+        <origin xyz="0.206000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RFArm"/>
+        <child link="RHand"/>
+    </joint>
+    <link name="RPinky1">
+        <visual name="RPinky1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RPinky1">
+         <origin xyz="0.019000 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.038000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RPinky1_joint" type="fixed">
+        <origin xyz="0.076000 0.033000 0.000000" rpy="0 0 0"/>
+        <parent link="RHand"/>
+        <child link="RPinky1"/>
+    </joint>
+    <link name="RPinky2">
+        <visual name="RPinky2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RPinky2">
+         <origin xyz="0.009500 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.019000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RPinky2_joint" type="fixed">
+        <origin xyz="0.038000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RPinky1"/>
+        <child link="RPinky2"/>
+    </joint>
+    <link name="RPinky3">
+        <visual name="RPinky3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RPinky3_joint" type="fixed">
+        <origin xyz="0.019000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RPinky2"/>
+        <child link="RPinky3"/>
+    </joint>
+    <link name="RRing1">
+        <visual name="RRing1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RRing1">
+         <origin xyz="0.023500 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.047000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RRing1_joint" type="fixed">
+        <origin xyz="0.081000 0.011000 0.000000" rpy="0 0 0"/>
+        <parent link="RHand"/>
+        <child link="RRing1"/>
+    </joint>
+    <link name="RRing2">
+        <visual name="RRing2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RRing2">
+         <origin xyz="0.012000 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.024000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RRing2_joint" type="fixed">
+        <origin xyz="0.047000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RRing1"/>
+        <child link="RRing2"/>
+    </joint>
+    <link name="RRing3">
+        <visual name="RRing3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RRing3_joint" type="fixed">
+        <origin xyz="0.024000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RRing2"/>
+        <child link="RRing3"/>
+    </joint>
+    <link name="RMiddle1">
+        <visual name="RMiddle1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RMiddle1">
+         <origin xyz="0.026000 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.052000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RMiddle1_joint" type="fixed">
+        <origin xyz="0.085000 -0.011000 0.000000" rpy="0 0 0"/>
+        <parent link="RHand"/>
+        <child link="RMiddle1"/>
+    </joint>
+    <link name="RMiddle2">
+        <visual name="RMiddle2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RMiddle2">
+         <origin xyz="0.014000 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.028000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RMiddle2_joint" type="fixed">
+        <origin xyz="0.052000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RMiddle1"/>
+        <child link="RMiddle2"/>
+    </joint>
+    <link name="RMiddle3">
+        <visual name="RMiddle3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RMiddle3_joint" type="fixed">
+        <origin xyz="0.028000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RMiddle2"/>
+        <child link="RMiddle3"/>
+    </joint>
+    <link name="RIndex1">
+        <visual name="RIndex1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RIndex1">
+         <origin xyz="0.023500 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.047000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RIndex1_joint" type="fixed">
+        <origin xyz="0.085000 -0.033000 0.000000" rpy="0 0 0"/>
+        <parent link="RHand"/>
+        <child link="RIndex1"/>
+    </joint>
+    <link name="RIndex2">
+        <visual name="RIndex2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RIndex2">
+         <origin xyz="0.012000 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.024000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RIndex2_joint" type="fixed">
+        <origin xyz="0.047000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RIndex1"/>
+        <child link="RIndex2"/>
+    </joint>
+    <link name="RIndex3">
+        <visual name="RIndex3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RIndex3_joint" type="fixed">
+        <origin xyz="0.024000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RIndex2"/>
+        <child link="RIndex3"/>
+    </joint>
+    <link name="RThumb1">
+        <visual name="RThumb1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RThumb1">
+         <origin xyz="0.014000 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.028000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RThumb1_joint" type="fixed">
+        <origin xyz="0.014000 -0.047000 -0.024000" rpy="0 0 0"/>
+        <parent link="RHand"/>
+        <child link="RThumb1"/>
+    </joint>
+    <link name="RThumb2">
+        <visual name="RThumb2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="RThumb2">
+         <origin xyz="0.014000 -0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.028000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RThumb2_joint" type="fixed">
+        <origin xyz="0.028000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RThumb1"/>
+        <child link="RThumb2"/>
+    </joint>
+    <link name="RThumb3">
+        <visual name="RThumb3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="RThumb3_joint" type="fixed">
+        <origin xyz="0.028000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="RThumb2"/>
+        <child link="RThumb3"/>
+    </joint>
+    <link name="LShoulder">
+        <visual name="LShoulder">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LShoulder">
+         <origin xyz="-0.076500 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.153000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LShoulder_joint" type="fixed">
+        <origin xyz="-0.039000 0.005000 0.158000" rpy="0 0 0"/>
+        <parent link="Chest"/>
+        <child link="LShoulder"/>
+    </joint>
+    <link name="LUArm">
+        <visual name="LUArm">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LUArm">
+         <origin xyz="-0.143500 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.287000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LUArm_joint" type="fixed">
+        <origin xyz="-0.153000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LShoulder"/>
+        <child link="LUArm"/>
+    </joint>
+    <link name="LFArm">
+        <visual name="LFArm">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LFArm">
+         <origin xyz="-0.103000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.206000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LFArm_joint" type="fixed">
+        <origin xyz="-0.287000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LUArm"/>
+        <child link="LFArm"/>
+    </joint>
+    <link name="LHand">
+        <visual name="LHand">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LHand_joint" type="fixed">
+        <origin xyz="-0.206000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LFArm"/>
+        <child link="LHand"/>
+    </joint>
+    <link name="LPinky1">
+        <visual name="LPinky1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LPinky1">
+         <origin xyz="-0.019000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.038000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LPinky1_joint" type="fixed">
+        <origin xyz="-0.076000 0.033000 0.000000" rpy="0 0 0"/>
+        <parent link="LHand"/>
+        <child link="LPinky1"/>
+    </joint>
+    <link name="LPinky2">
+        <visual name="LPinky2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LPinky2">
+         <origin xyz="-0.009500 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.019000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LPinky2_joint" type="fixed">
+        <origin xyz="-0.038000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LPinky1"/>
+        <child link="LPinky2"/>
+    </joint>
+    <link name="LPinky3">
+        <visual name="LPinky3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LPinky3_joint" type="fixed">
+        <origin xyz="-0.019000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LPinky2"/>
+        <child link="LPinky3"/>
+    </joint>
+    <link name="LRing1">
+        <visual name="LRing1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LRing1">
+         <origin xyz="-0.023500 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.047000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LRing1_joint" type="fixed">
+        <origin xyz="-0.081000 0.011000 0.000000" rpy="0 0 0"/>
+        <parent link="LHand"/>
+        <child link="LRing1"/>
+    </joint>
+    <link name="LRing2">
+        <visual name="LRing2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LRing2">
+         <origin xyz="-0.012000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.024000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LRing2_joint" type="fixed">
+        <origin xyz="-0.047000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LRing1"/>
+        <child link="LRing2"/>
+    </joint>
+    <link name="LRing3">
+        <visual name="LRing3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LRing3_joint" type="fixed">
+        <origin xyz="-0.024000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LRing2"/>
+        <child link="LRing3"/>
+    </joint>
+    <link name="LMiddle1">
+        <visual name="LMiddle1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LMiddle1">
+         <origin xyz="-0.026000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.052000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LMiddle1_joint" type="fixed">
+        <origin xyz="-0.085000 -0.011000 0.000000" rpy="0 0 0"/>
+        <parent link="LHand"/>
+        <child link="LMiddle1"/>
+    </joint>
+    <link name="LMiddle2">
+        <visual name="LMiddle2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LMiddle2">
+         <origin xyz="-0.014000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.028000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LMiddle2_joint" type="fixed">
+        <origin xyz="-0.052000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LMiddle1"/>
+        <child link="LMiddle2"/>
+    </joint>
+    <link name="LMiddle3">
+        <visual name="LMiddle3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LMiddle3_joint" type="fixed">
+        <origin xyz="-0.028000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LMiddle2"/>
+        <child link="LMiddle3"/>
+    </joint>
+    <link name="LIndex1">
+        <visual name="LIndex1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LIndex1">
+         <origin xyz="-0.023500 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.047000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LIndex1_joint" type="fixed">
+        <origin xyz="-0.085000 -0.033000 0.000000" rpy="0 0 0"/>
+        <parent link="LHand"/>
+        <child link="LIndex1"/>
+    </joint>
+    <link name="LIndex2">
+        <visual name="LIndex2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LIndex2">
+         <origin xyz="-0.012000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.024000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LIndex2_joint" type="fixed">
+        <origin xyz="-0.047000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LIndex1"/>
+        <child link="LIndex2"/>
+    </joint>
+    <link name="LIndex3">
+        <visual name="LIndex3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LIndex3_joint" type="fixed">
+        <origin xyz="-0.024000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LIndex2"/>
+        <child link="LIndex3"/>
+    </joint>
+    <link name="LThumb1">
+        <visual name="LThumb1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LThumb1">
+         <origin xyz="-0.014000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.028000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LThumb1_joint" type="fixed">
+        <origin xyz="-0.014000 -0.047000 -0.024000" rpy="0 0 0"/>
+        <parent link="LHand"/>
+        <child link="LThumb1"/>
+    </joint>
+    <link name="LThumb2">
+        <visual name="LThumb2">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="LThumb2">
+         <origin xyz="-0.014000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.028000"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LThumb2_joint" type="fixed">
+        <origin xyz="-0.028000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LThumb1"/>
+        <child link="LThumb2"/>
+    </joint>
+    <link name="LThumb3">
+        <visual name="LThumb3">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="LThumb3_joint" type="fixed">
+        <origin xyz="-0.028000 -0.000000 0.000000" rpy="0 0 0"/>
+        <parent link="LThumb2"/>
+        <child link="LThumb3"/>
+    </joint>
+    <link name="Neck">
+        <visual name="Neck">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+        <visual name="Neck">
+         <origin xyz="0.000000 -0.009500 0.073500" rpy="0.128539 0.000000 0.000000"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.148223"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="Neck_joint" type="fixed">
+        <origin xyz="0.000000 -0.000000 0.208000" rpy="0 0 0"/>
+        <parent link="Chest"/>
+        <child link="Neck"/>
+    </joint>
+    <link name="Head">
+        <visual name="Head">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="Head_joint" type="fixed">
+        <origin xyz="0.000000 -0.019000 0.147000" rpy="0 0 0"/>
+        <parent link="Neck"/>
+        <child link="Head"/>
+    </joint>
+  </robot>

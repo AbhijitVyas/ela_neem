@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- created with static scene to urdf converter -->
+  <robot name="harea">
+    <link name="floor">
+        <visual name="floor">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://elan_neem/meshes/dae/floor.stl" scale="1 1 1"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="table1">
+        <visual name="table1">
+         <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://elan_neem/meshes/dae/Table1.dae" scale="1 1 1"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="table2">
+        <visual name="table2p1">
+         <origin xyz="0.3 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://elan_neem/meshes/dae/Table2.dae" scale="1 1 1"/>
+            </geometry>
+        </visual>
+        <visual name="table2p2">
+         <origin xyz="-0.3 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://elan_neem/meshes/dae/Table2.dae" scale="1 1 1"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="Table1_joint" type="fixed">
+        <origin xyz="-0.655 -0.67 0" rpy="0 0 0"/>
+        <parent link="floor"/>
+        <child link="table1"/>
+    </joint>
+    <joint name="Table2_joint" type="fixed">
+        <origin xyz="0.9 1.39 0" rpy="0 0 0"/>
+        <parent link="floor"/>
+        <child link="table2"/>
+    </joint>
+  </robot>
